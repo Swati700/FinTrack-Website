@@ -1,0 +1,150 @@
+/* FORM  */
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 70px);
+  padding: 30px;
+}
+
+/* Form */
+
+.budget-form,
+.goal-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 25px;
+  background: #eaedfa;
+  border: 1px solid rgba(192, 192, 192, 0.493);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* Form Header */
+
+.form-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.budget-form h2,
+.goal-form h2 {
+  margin: 0;
+  color: #141b2b;
+}
+
+/* Close Button */
+
+.close-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #dadafe;
+}
+
+.close-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Each Field */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #303548;
+}
+
+/* Inputs & Select */
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #dbd4fc;
+  border-radius: 7px;
+  outline: none;
+  font: inherit;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: #303548;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #4648d4;
+  box-shadow: 0 0 0 2px #e9e9fd;
+}
+
+/* Save & Cancel Buttons */
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.form-actions button {
+  flex: 1;
+}
+
+.form-btn,
+.cancel-btn {
+  width: 100%;
+  padding: 11px;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Create / Add Button */
+
+.form-btn {
+  border: none;
+  background: #4648d4;
+  color: #ffffff;
+}
+
+.form-btn:hover {
+  background: #393bc0;
+}
+
+/* Cancel Button */
+
+.cancel-btn {
+  border: 1px solid #dfe3f0;
+  background: #ffffff;
+  color: #303548;
+}
+
+.cancel-btn:hover {
+  background: #f5f5f8;
+}

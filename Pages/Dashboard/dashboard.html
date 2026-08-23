@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="../../index.css" />
+    <link rel="stylesheet" href="../../responsive.css" />
+    <title>FinTrack Dashboard</title>
+  </head>
+
+  <body>
+    <div class="dashboard-container">
+      <!-- Navbar -->
+      <div class="dashboard-navbar">
+        <nav>
+          <div class="nav-left">
+            <h2>Dashboard</h2>
+            <p>Here's our financial overview</p>
+          </div>
+          <div class="nav-right">
+            <div class="notification">
+              <i data-lucide="bell-dot"></i>
+            </div>
+            <div class="profile">
+              <img src="profile.avif" alt="" />
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="dashboard-sidebar">
+        <aside>
+          <div class="top">
+            <div class="logo">
+              <i data-lucide="landmark" color="#4648D4"></i>
+            </div>
+            <h2 class="brandName">FinTrack <span>Personal Finance</span></h2>
+          </div>
+
+          <div class="middle">
+            <div class="container">
+              <div class="feature-icons">
+                <a href="../Dashboard/dashboard.html" class="active"
+                  ><i data-lucide="layout-dashboard"></i>Dashboard</a
+                >
+              </div>
+              <div class="feature-icons">
+                <a href="../Transaction/transaction.html"
+                  ><i data-lucide="receipt-text"></i> Transactions</a
+                >
+              </div>
+              <div class="feature-icons">
+                <a href="../Budgets/budgets.html"
+                  ><i data-lucide="wallet"></i>Budgets</a
+                >
+              </div>
+              <div class="feature-icons">
+                <a href="goals.html"><i data-lucide="goal"></i>Goals</a>
+              </div>
+              <div class="feature-icons">
+                <a href="reports.html">
+                  <i data-lucide="chart-no-axes-column"></i>Reports
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom">
+            <hr />
+            <div class="feature-icons">
+              <button><i data-lucide="settings"></i>Settings</button>
+            </div>
+            <div class="feature-icons">
+              <button><i data-lucide="user-round"></i>Profile</button>
+            </div>
+            <div class="feature-icons">
+              <button>
+                <i data-lucide="log-out" color="#BA1A1A"></i>Logout
+              </button>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Main Content -->
+      <div class="dashboard-main">
+        <main>
+          <div class="main-top">
+            <div class="small-cards">
+              <!-- Total Balance -->
+              <div class="card">
+                <div class="card-box">
+                  <p>Total Balance</p>
+                  <div class="icon-box balance-icon">
+                    <i class="draw" data-lucide="wallet" color="#4648D4"></i>
+                  </div>
+                </div>
+
+                <div class="extra">
+                  <h1 class="balance">$0.00</h1>
+                  <p class="trend">
+                    <i data-lucide="trending-up"></i>
+                    +12.5% vs last month
+                  </p>
+                </div>
+              </div>
+
+              <!-- Total Income -->
+              <div class="card">
+                <div class="card-box">
+                  <p>Total Income</p>
+                  <div class="icon-box income-icon">
+                    <i
+                      class="draw"
+                      data-lucide="arrow-down"
+                      color="#006C49"
+                    ></i>
+                  </div>
+                </div>
+
+                <div class="extra">
+                  <h1 class="income">$0.00</h1>
+                  <p class="trend">
+                    <i data-lucide="trending-up"></i>
+                    +8.2%
+                  </p>
+                </div>
+              </div>
+
+              <!-- Total Expenses -->
+              <div class="card">
+                <div class="card-box">
+                  <p>Total Expenses</p>
+                  <div class="icon-box expense-icon">
+                    <i class="draw" data-lucide="arrow-up" color="#BA1A1A"></i>
+                  </div>
+                </div>
+
+                <div class="extra">
+                  <h1 class="expense">$0.00</h1>
+                  <p class="trend">
+                    <i data-lucide="trending-down"></i>
+                    -4.5%
+                  </p>
+                </div>
+              </div>
+
+              <!-- Total Savings -->
+              <div class="card">
+                <div class="card-box">
+                  <p>Total Savings</p>
+                  <div class="icon-box saving-icon">
+                    <i
+                      class="draw"
+                      data-lucide="piggy-bank"
+                      color="#4648D4"
+                    ></i>
+                  </div>
+                </div>
+
+                <div class="extra">
+                  <h1 class="saving">$0.00</h1>
+                  <p class="trend">
+                    <i data-lucide="trending-up"></i>
+                    +10.4%
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-middle">
+            <div class="charts">
+              <div class="finance-chart">
+                <div class="finance-chart-head">
+                  <h2>Financial Overview</h2>
+                  <select name="months" id="months">
+                    <option value="jan-jun">Jan - Jun</option>
+                    <option value="jul-dec">Jul - Dec</option>
+                  </select>
+                </div>
+
+                <div class="chart-legend">
+                  <span class="legend income">Income</span>
+                  <span class="legend expense">Expenses</span>
+                </div>
+
+                <div class="finance-graph">
+                  <svg
+                    viewBox="0 0 520 180"
+                    preserveAspectRatio="none"
+                    aria-label="Financial overview chart"
+                  >
+                    <defs>
+                      <linearGradient
+                        id="incomeFill"
+                        x1="0"
+                        x2="0"
+                        y1="0"
+                        y2="1"
+                      >
+                        <stop
+                          offset="0%"
+                          stop-color="#4f5fef"
+                          stop-opacity="0.26"
+                        />
+                        <stop
+                          offset="100%"
+                          stop-color="#4f5fef"
+                          stop-opacity="0.02"
+                        />
+                      </linearGradient>
+                      <linearGradient
+                        id="expenseFill"
+                        x1="0"
+                        x2="0"
+                        y1="0"
+                        y2="1"
+                      >
+                        <stop
+                          offset="0%"
+                          stop-color="#ff7b7b"
+                          stop-opacity="0.22"
+                        />
+                        <stop
+                          offset="100%"
+                          stop-color="#ff7b7b"
+                          stop-opacity="0.02"
+                        />
+                      </linearGradient>
+                    </defs>
+                    <g>
+                      <path
+                        class="income-line"
+                        d="M0,150 L80,115 L160,130 L240,81 L320,96 L400,60 L520,24 L520,180 L0,180 Z"
+                        fill="url(#incomeFill)"
+                        opacity="0.9"
+                      />
+                      <path
+                        class="expense-line"
+                        d="M0,132 L80,142 L160,118 L240,128 L320,98 L400,110 L520,82 L520,180 L0,180 Z"
+                        fill="url(#expenseFill)"
+                        opacity="0.8"
+                      />
+                      <path
+                        d="M0,150 L80,115 L160,130 L240,81 L320,96 L400,60 L520,24"
+                        fill="none"
+                        stroke="#4f5fef"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M0,132 L80,142 L160,118 L240,128 L320,98 L400,110 L520,82"
+                        fill="none"
+                        stroke="#ff6b6b"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="expense-chart">
+                <h2>Expense Breakdown</h2>
+
+                <div class="expense-wrap">
+                  <div class="donut-chart">
+                    <div class="donut-center">
+                      <span>Total</span>
+                      <strong class="expense-total">$3,620</strong>
+                    </div>
+                  </div>
+
+                  <div class="categories">
+                    <p><i class="dot purple"></i>Shopping <span>35%</span></p>
+                    <p><i class="dot blue"></i>Transport <span>15%</span></p>
+                    <p><i class="dot gray"></i>Bills <span>8%</span></p>
+                    <p><i class="dot green"></i>Food <span>25%</span></p>
+                    <p><i class="dot orange"></i>Ent. <span>10%</span></p>
+                    <p><i class="dot red"></i>Others <span>7%</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-bottom">
+            <div class="tracking">
+              <div class="transactions">
+                <div class="medium-card">
+                  <h2>
+                    Recent Transactions
+                    <a href="../Transaction/transaction.html" class="blue"
+                      >View All</a
+                    >
+                  </h2>
+                  <div id="recentTransactions"></div>
+                </div>
+              </div>
+
+              <div class="budget">
+                <div class="medium-card">
+                  <h2>
+                    Budget Overview
+                    <a href="../Budgets/budgets.html" class="blue">View All</a>
+                  </h2>
+
+                  <div id="budgetOverview"></div>
+                </div>
+              </div>
+
+              <div class="financial">
+                <div class="medium-card">
+                  <h2>
+                    Financial Goals
+                    <a href="../Budgets/budgets.html" class="blue">View All</a>
+                  </h2>
+
+                  <div id="dashboardGoals"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="../Dashboard/dashboard.js"></script>
+  </body>
+</html>

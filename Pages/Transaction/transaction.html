@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../Dashboard/dashboard.css" />
+    <link rel="stylesheet" href="transaction.css" />
+    <link rel="stylesheet" href="../../index.css" />
+    <link rel="stylesheet" href="../../responsive.css" />
+    <title>FinTrack Transactions</title>
+  </head>
+
+  <body>
+    <div class="dashboard-container">
+      <!-- Navbar -->
+      <div class="dashboard-navbar">
+        <nav>
+          <div class="nav-left">
+            <h2>Transactions</h2>
+            <p>Track all your income and expenses</p>
+          </div>
+          <div class="nav-right">
+            <div class="transaction-btn">
+              <a href="../Transaction/Form/form.html">+ New Transaction</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="dashboard-sidebar">
+        <aside>
+          <div class="top">
+            <div class="logo">
+              <i data-lucide="landmark" color="#4648D4"></i>
+            </div>
+            <h2 class="brandName">FinTrack <span>Personal Finance</span></h2>
+          </div>
+
+          <div class="middle">
+            <div class="container">
+              <div class="feature-icons">
+                <a href="../Dashboard/dashboard.html"
+                  ><i data-lucide="layout-dashboard"></i>Dashboard</a
+                >
+              </div>
+              <div class="feature-icons">
+                <a href="../Transaction/transaction.html" class="active"
+                  ><i data-lucide="receipt-text"></i> Transactions</a
+                >
+              </div>
+              <div class="feature-icons">
+                <a href="../Budgets/budgets.html"
+                  ><i data-lucide="wallet"></i>Budgets</a
+                >
+              </div>
+              <div class="feature-icons">
+                <a href="goals.html"><i data-lucide="goal"></i>Goals</a>
+              </div>
+              <div class="feature-icons">
+                <a href="reports.html">
+                  <i data-lucide="chart-no-axes-column"></i>Reports
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom">
+            <hr />
+            <div class="feature-icons">
+              <button><i data-lucide="settings"></i>Settings</button>
+            </div>
+            <div class="feature-icons">
+              <button><i data-lucide="user-round"></i>Profile</button>
+            </div>
+            <div class="feature-icons">
+              <button>
+                <i data-lucide="log-out" color="#BA1A1A"></i>Logout
+              </button>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Main Content -->
+      <div class="dashboard-main">
+        <main>
+          <div class="top-card">
+            <div class="cards">
+              <div>
+                <i
+                  data-lucide="arrow-up"
+                  class="icon-box income-icon"
+                  color="#006C49"
+                ></i>
+                <p>Total Income</p>
+              </div>
+              <h2 class="income">$00</h2>
+            </div>
+            <div class="cards">
+              <div>
+                <i
+                  data-lucide="arrow-down"
+                  class="icon-box expense-icon"
+                  color="#BA1A1A"
+                ></i>
+                <p>Total Expenses</p>
+              </div>
+              <h2 class="expense">$00</h2>
+            </div>
+            <div class="cards">
+              <div>
+                <i
+                  data-lucide="landmark"
+                  class="icon-box saving-icon"
+                  color="#4648D4"
+                ></i>
+                <p>Net Balance</p>
+              </div>
+              <h2 class="balance">$00</h2>
+            </div>
+          </div>
+          <div class="middle-card">
+            <div class="box">
+              <!-- Search -->
+              <div class="body">
+                <i data-lucide="search"></i>
+                <input
+                  type="text"
+                  id="searchTransaction"
+                  placeholder="Search transactions..."
+                />
+              </div>
+
+              <!-- Type Filter -->
+              <div class="body">
+                <p class="all-box filter-type active" data-type="all">All</p>
+                <p class="filter-type" data-type="income">Income</p>
+                <p class="filter-type" data-type="expense">Expenses</p>
+              </div>
+
+              <!-- Category Filter -->
+              <select id="categoryFilter" class="boarder">
+                <option value="all">All Categories</option>
+                <option value="salary">Salary</option>
+                <option value="housing">Housing</option>
+                <option value="food">Food</option>
+                <option value="utilities">Utilities</option>
+                <option value="health">Health</option>
+                <option value="travel">Travel</option>
+                <option value="freelance">Freelance</option>
+                <option value="transport">Transport</option>
+                <option value="shopping">Shopping</option>
+                <option value="bills">Bills</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="others">Others</option>
+              </select>
+
+              <!-- Date Filter -->
+              <div class="boarder" id="dateFilter">
+                <i data-lucide="calendar"></i>
+                <p>This Month</p>
+              </div>
+            </div>
+          </div>
+          <table class="transaction-table">
+            <thead>
+              <tr>
+                <th>Transaction</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Payment Method</th>
+                <th>Amount</th>
+                <th>Type</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody id="transactionList"></tbody>
+
+            <tfoot>
+              <tr>
+                <td colspan="7">
+                  <div class="table-footer">
+                    <p id="paginationInfo">Showing 0 to 0 of 0 transactions</p>
+
+                    <div class="pagination" id="pagination">
+                      <button id="prevPage" type="button">
+                        <i data-lucide="chevron-left"></i>
+                      </button>
+                      <!-- Page buttons JS se aayenge -->
+                      <button id="nextPage" type="button">
+                        <i data-lucide="chevron-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </main>
+      </div>
+    </div>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="../Transaction/transaction.js"></script>
+  </body>
+</html>

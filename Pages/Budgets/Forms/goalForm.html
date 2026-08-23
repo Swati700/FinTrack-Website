@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../index.css" />
+    <link rel="stylesheet" href="../Forms/form.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Create Goal</title>
+    <style></style>
+  </head>
+  <body>
+    <main class="main-content">
+      <form class="goal-form" id="goalForm">
+        <div class="form-header">
+          <h2>Create Goal</h2>
+          <button type="button" class="close-btn" onclick="history.back()">
+            <i data-lucide="x" color="#4648d4"></i>
+          </button>
+        </div>
+
+        <div class="form-group">
+          <label for="goal-name">Goal Name</label>
+          <input type="text" id="goal-name" placeholder="e.g. Japan Trip" />
+        </div>
+
+        <div class="form-group">
+          <label for="target-amount">Target Amount</label>
+          <input
+            type="number"
+            id="target-amount"
+            placeholder="Enter target amount"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="current-amount">Current Amount</label>
+          <input
+            type="number"
+            id="current-amount"
+            placeholder="Enter current amount"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="target-date">Target Date</label>
+          <input type="date" id="target-date" />
+        </div>
+
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select id="status">
+            <option value="on-track">On Track</option>
+            <option value="need-attention">Need Attention</option>
+          </select>
+        </div>
+
+        <div class="form-actions">
+          <button type="reset" class="cancel-btn">Cancel</button>
+
+          <button type="submit" class="form-btn">Add Goal</button>
+        </div>
+      </form>
+    </main>
+
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="../Forms/goalForm.js"></script>
+  </body>
+</html>

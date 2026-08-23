@@ -1,0 +1,261 @@
+/* Navbar */
+.dashboard-navbar {
+  padding-top: 20px;
+  border-bottom: none;
+}
+
+.transaction-btn a {
+  padding: 10px 25px;
+  border: 1px solid rgb(205, 205, 205);
+  border-radius: 8px;
+  background: #4648d4;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.transaction-btn button:hover {
+  background: #393bc0;
+}
+
+
+/* TOP CARDS */
+
+.top-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.cards {
+  min-height: 120px;
+  padding: 20px;
+  border: 1px solid #dfe3f0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.cards>div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.cards h2 {
+  margin: 0;
+  padding-left: 7px;
+  font-size: 1.5rem;
+  color: #20293b;
+}
+
+/* Individual card backgrounds */
+.cards:nth-child(1) {
+  background: linear-gradient(to right, #fff, #e4fff7);
+}
+
+.cards:nth-child(2) {
+  background: linear-gradient(to right, #fff, #feeae8);
+}
+
+.cards:nth-child(3) {
+  background: linear-gradient(to right, #fff, #e9e9fd);
+}
+
+
+/* FILTER / SEARCH BOX */
+.middle-card {
+  margin-top: 30px;
+}
+
+.middle-card .box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  min-height: 62px;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  border: 1px solid #dfe3f0;
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* Search */
+.box .body {
+  display: flex;
+  align-items: center;
+}
+
+.box .body:nth-child(1) {
+  flex: 1;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid #dfe3f0;
+  border-radius: 7px;
+  background: #E9EDFF;
+}
+
+.body:nth-child(1) input {
+  margin: 0;
+  padding-left: 8px;
+  color: #74798a;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+/* Income / Expense filter */
+.box .body:nth-child(2) {
+  gap: 5px;
+  padding: 4px;
+  border: 1px solid #dfe3f0;
+  border-radius: 7px;
+  background: #E9EDFF;
+}
+
+.body:nth-child(2) p {
+  margin: 0;
+  padding: 8px 13px;
+  color: #555b6e;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.body .all-box {
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  color: #555b6e;
+}
+
+.body .filter-type.active {
+  border: 1px solid #dfe3f0;
+  border-radius: 5px;
+  background: #fff;
+  color: #4648d4;
+}
+
+/* CATEGORY SELECT */
+.box select.boarder {
+  min-width: 155px;
+  padding: 10px 12px;
+  border: 1px solid #dae0f1;
+  border-radius: 7px;
+  background: #fff;
+  color: #555b6e;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* DATE FILTER */
+.box .boarder:last-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 120px;
+  padding: 9px 12px;
+  border: 1px solid #dfe3f0;
+  border-radius: 7px;
+  background: #fff;
+  color: #555b6e;
+  cursor: pointer;
+}
+
+.box .boarder:last-child p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Table */
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  margin-top: 30px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #dfe3f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.transaction-table th {
+  padding: 18px;
+  text-align: left;
+  background: #f1f3ff;
+}
+
+.transaction-table td {
+  padding: 18px;
+  border-top: 1px solid #dfe3f0;
+}
+
+.transaction-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.transaction-info h4,
+.transaction-info p {
+  margin: 0;
+}
+
+.transaction-info p {
+  margin-top: 4px;
+}
+
+.transaction-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.income {
+  font-weight: 600;
+}
+
+.green {
+  color: #006c49;
+}
+
+.table-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table-footer p {
+  margin: 0;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pagination button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #dfe3f0;
+  border-radius: 7px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background: #4648d4;
+  color: #fff;
+}

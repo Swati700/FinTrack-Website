@@ -1,0 +1,284 @@
+/* navbar btn */
+.dashboard-navbar {
+  padding-top: 15px;
+}
+
+.dashboard-navbar {
+  border-bottom: none;
+}
+
+.report-btn a {
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: 1px solid rgba(168, 166, 166, 0.826);
+  background: #F1F3FF;
+  color: #141B2B;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* main */
+.dashboard-main {
+  padding: 7px;
+}
+
+.dashboard-main .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 29px;
+  font-weight: 600;
+  font-size: large;
+}
+
+.heading a {
+  text-decoration: none;
+}
+
+.dashboard-main .heading p {
+  color: #4648D4;
+  cursor: pointer;
+}
+
+/* top-card */
+.top-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 15px 25px;
+  gap: 20px;
+}
+
+.card {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid rgba(192, 192, 192, 0.493);
+  border-radius: 10px;
+  min-height: 150px;
+  background: #fff;
+}
+
+.card .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.card .title p {
+  color: #464554;
+  font-weight: 500;
+}
+
+.card .desc, .desc1, .desc2 {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card .desc1 p {
+  display: inline;
+  font-weight: 400;
+}
+
+.card .desc2 span {
+  color: #BA1A1A;
+}
+
+/* Middle Cards */
+.middle-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin: 25px;
+}
+
+.small-card {
+  padding: 20px;
+  border: 1px solid rgba(192, 192, 192, 0.493);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.small-card .content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.small-card .content h4 {
+  margin: 0;
+  flex: 1;
+}
+
+.small-card .content p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #5d5c69;
+}
+
+.small-card .bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  background: #dce2f7;
+  overflow: hidden;
+}
+
+.small-card .progress {
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  background: #4648d4;
+}
+
+.remaining-progress {
+  width: 0;
+  height: 100%;
+  background: #4648d4;
+  border-radius: inherit;
+}
+
+.small-card .percent {
+  margin: 8px 0 0;
+  text-align: right;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #5d5c69;
+}
+
+.small-card:nth-child(2) .progress {
+  background: #006C49;
+  width: 81%;
+}
+
+.small-card:nth-child(3) .progress {
+  width: 66%;
+}
+
+.small-card:nth-child(4) .progress {
+  background: #BA1A1A;
+  width: 95%;
+}
+
+.small-card:nth-child(5) .progress {
+  width: 22%;
+}
+
+.small-card:nth-child(6) .progress {
+  background: #464554;
+  width: 47%;
+}
+
+/* Bottom Cards */
+.bottom-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin: 15px 25px;
+}
+
+.goal-card {
+  padding: 20px;
+  border: 1px solid rgba(192, 192, 192, 0.493);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.goal-card .section-1,
+.goal-card .section-2,
+.goal-card .section-3,
+.goal-card .section-4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-1>div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-1 h4 {
+  margin: 0;
+}
+
+.section-1>div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.section-2 {
+  margin-top: 25px;
+}
+
+.section-2 p,
+.section-3 p,
+.section-4 p {
+  margin: 0;
+}
+
+.section-2 {
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.section-3 {
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.card-actions button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.goal-card .bar {
+  width: 100%;
+  height: 10px;
+  margin-top: 15px;
+  border-radius: 10px;
+  background: #dce2f7;
+  overflow: hidden;
+}
+
+.goal-card .progress {
+  width: 64%;
+  height: 100%;
+  border-radius: inherit;
+  background: #4648d4;
+}
+
+.section-4 {
+  margin-top: 12px;
+}
+
+.goal-card:nth-child(1) .section-4 .text-1 {
+  color: #006c49;
+  font-weight: 600;
+}
+
+.section-4 .text-2 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.goal-card:nth-child(1) .progress {
+  background: #006C49;
+  width: 64%;
+}
+
+.goal-card:nth-child(2) .progress {
+  width: 26%;
+}

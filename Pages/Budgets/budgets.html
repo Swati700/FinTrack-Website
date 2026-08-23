@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../Dashboard/dashboard.css" />
+    <link rel="stylesheet" href="./budget.css" />
+    <link rel="stylesheet" href="../../index.css" />
+    <link rel="stylesheet" href="../../responsive.css" />
+    <title>FinTrack Budgets</title>
+  </head>
+
+  <body>
+    <div class="dashboard-container">
+      <!-- Navbar -->
+      <div class="dashboard-navbar">
+        <nav>
+          <div class="nav-left">
+            <h2>Budgets & Goals</h2>
+            <p>Track your monthly spending and long-term aspirations.</p>
+          </div>
+          <div class="nav-right">
+            <div class="report-btn">
+              <a href="../Reports/reports.html">Generate Report</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="dashboard-sidebar">
+        <aside>
+          <div class="top">
+            <div class="logo">
+              <i data-lucide="landmark" color="#4648D4"></i>
+            </div>
+            <h2 class="brandName">FinTrack <span>Personal Finance</span></h2>
+          </div>
+
+          <div class="middle">
+            <div class="container">
+              <div class="feature-icons">
+                <a href="../Dashboard/dashboard.html"
+                  ><i data-lucide="layout-dashboard"></i>Dashboard</a
+                >
+              </div>
+              <div class="feature-icons">
+                <a href="../Transaction/transaction.html"
+                  ><i data-lucide="receipt-text"></i> Transactions</a
+                >
+              </div>
+              <div class="feature-icons">
+                <a href="../Budgets/budgets.html" class="active"
+                  ><i data-lucide="wallet"></i>Budgets</a
+                >
+              </div>
+              <div class="feature-icons">
+                <a href="goals.html"><i data-lucide="goal"></i>Goals</a>
+              </div>
+              <div class="feature-icons">
+                <a href="reports.html">
+                  <i data-lucide="chart-no-axes-column"></i>Reports
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom">
+            <hr />
+            <div class="feature-icons">
+              <button><i data-lucide="settings"></i>Settings</button>
+            </div>
+            <div class="feature-icons">
+              <button><i data-lucide="user-round"></i>Profile</button>
+            </div>
+            <div class="feature-icons">
+              <button>
+                <i data-lucide="log-out" color="#BA1A1A"></i>Logout
+              </button>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Main Content -->
+      <div class="dashboard-main">
+        <main>
+          <div class="heading">
+            <h3>Monthly Budgets</h3>
+            <a href="../Budgets/Forms/budgetForm.html">+ Create Budget</a>
+          </div>
+          <div class="top-cards">
+            <div class="card">
+              <div class="title">
+                <p>Total Budget</p>
+                <i data-lucide="wallet" color="#4648D4"></i>
+              </div>
+              <h2 class="total-budget">$0.00</h2>
+              <div class="desc1">
+                <i data-lucide="calendar-days" width="15px"></i>
+                <p>October 2023</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="title">
+                <p>Total Spent</p>
+                <i data-lucide="trending-down" color="#BA1A1A"></i>
+              </div>
+              <h2 class="total-spent">$0.00</h2>
+              <div class="desc2">
+                <p><span class="spent-percentage">63%</span> of total budget</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="title">
+                <p>Remaining</p>
+                <i data-lucide="piggy-bank" color="#006C49"></i>
+              </div>
+              <h2 class="remaining">$0.00</h2>
+              <div class="desc">
+                <div class="bar">
+                  <div class="remaining-progress"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="middle-card" id="budgetList"></div>
+
+          <div class="heading">
+            <h3>My Financial Goals</h3>
+            <a href="../Budgets/Forms/goalForm.html">+ Add Goal</a>
+          </div>
+
+          <div class="bottom-card" id="goalList"></div>
+        </main>
+      </div>
+    </div>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="./budget.js"></script>
+    <!-- <script src="../Budgets/Forms/budgetForm.js"></script>
+    <script src="../Budgets/Forms/goalForm.js"></script> -->
+  </body>
+</html>
